@@ -16,39 +16,9 @@ class Library:
     def __init__(self, name, address):
         self.name = name
         self.address = address
+  
 
-
-class Book:
-    def __init__(self, title, BookID, author, year, type):
-        self.title = title
-        self.BookID = BookID
-        self.author = author
-        self.year = year
-        self.Type = type
-
-
-
-class Customer:
-    def __init__(self, name, CusID, age, city, loaned_books = [],):
-        self.name = name
-        self.CusID = CusID
-        self.city = city
-        self.age = age
-        self.loaned_books = loaned_books
-
-
-
-class loan:
-    def __init__(self, CustID, BookID, Loandate, Returndate):
-        self.CustID = CustID
-        self.BookID = BookID
-        self.Loandate = Loandate 
-        self.Returndate = Returndate    
-
-
-
-
-Sifriya = Library("Library of the dreams!", "mishol haeshkolot 7b")
+Sifriya = Library("Library of the dreams!", "Burla 26 akko")
 
 
 def main():

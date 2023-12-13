@@ -1,17 +1,7 @@
 import json
 from new_loans import add_new_loan
 
-
-
-
-class loan:
-    def __init__(self, CustID, BookID, Loandate, Returndate):
-        self.CustID = CustID
-        self.BookID = BookID
-        self.Loandate = Loandate 
-        self.Returndate = Returndate    
-
-
+  
 
 def check_customer_name(customer_name,customers):
  for customer in customers:
@@ -62,7 +52,7 @@ def loan_book():
          print("You have 5 days to return this book to library.\n")
         elif book ['Type'] == '3':
          print("You have 2 days to return this book to library.\n")
-        add_new_loan(book_title, customer['CusID'] , book['BookID'], loan_date)   
+        add_new_loan(book_title, book['Type'], customer['CusID'] , book['BookID'], loan_date)   
   customers_file = open("customers.json" , "w")
   json.dump(customers, customers_file) 
   customers_file.close()

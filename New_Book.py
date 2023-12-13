@@ -1,15 +1,9 @@
 from book_options import check_book
+from class_book import Book
 import random
 import json
 
 
-class Book:
-    def __init__(self, title, BookID, author, year, type):
-        self.title = title
-        self.BookID = BookID
-        self.author = author
-        self.year = year
-        self.type = type
 
 def add_book():
 
@@ -18,7 +12,7 @@ def add_book():
  author = input("Please enter book Author:")
  year = input("Please enter Publication Year:")
  type = input("Please select book type(1/2/3): ")
- if type != 1 and type != 2 and type != 3:
+ if type != '1' and type != '2' and type != '3':
     print("Please insert a valid Type.\n")
  else:    
   books_file = open ("Books.json","r") 
@@ -40,7 +34,7 @@ def add_book():
         "BookID": new_book.BookID,
         "Author": new_book.author,
         "Year": new_book.year,
-        "type": new_book.type
+        "Type": new_book.type
        }
    books.append(B)
    books_file = open ("Books.json","w")

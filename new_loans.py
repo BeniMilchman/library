@@ -1,23 +1,15 @@
 import json
-
-class loan:
-    def __init__(self, book_title, CusID, BookID, loandate, returndate):
-        self.book_title = book_title
-        self.CusID = CusID
-        self.BookID = BookID
-        self.loandate = loandate 
-        self.returndate = returndate    
+from class_loan import loan
 
 
-
-
-def add_new_loan(book_title, CusID, BookID, loandate):
+def add_new_loan(book_title, book_type, CusID, BookID, loandate):
  loans_file = open("loans.json" , "r")
  loans = json.load(loans_file)
  loans_file.close()
- new_loan = loan(book_title, CusID, BookID, loandate, returndate = '')
+ new_loan = loan(book_title,book_type, CusID, BookID, loandate, returndate = '')
 
  L = {"Title": new_loan.book_title,
+      "Type": new_loan.book_type,
       "CusID": new_loan.CusID,
       "BookID": new_loan.BookID,
       "Loan date": new_loan.loandate,
