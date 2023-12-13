@@ -1,0 +1,4 @@
+[{"Title": "alice in wonderland", "CusID": 1, "BookID": 10, "Loan date": "12/10/2023", "Return date": "15/10/2023"},
+ {"Title": "50 shades of gray", "CusID": 1, "BookID": 1896, "Loan date": "23/10/23", "Return date": "28/10/23"},
+  {"Title": "the hunger games", "CusID": 1, "BookID": 5447, "Loan date": "15/08/1997", "Return date": "20/08/2023"},
+ {"Title": "50 shades of gray", "CusID": 7141, "BookID": 1896, "Loan date": "07/10/2023", "Return date": "15/10/2023"}]

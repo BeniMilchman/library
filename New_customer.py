@@ -1,0 +1,42 @@
+import random
+import json
+
+
+class Customer:
+    def __init__(self, name, CusID, age, city, loaned_books = [],):
+        self.name = name
+        self.CusID = CusID
+        self.city = city
+        self.age = age
+        self.loaned_books = loaned_books
+        
+
+def add_customer():
+ checkID = 0
+ name = input("What is your full name?")
+ age = input("please tell us your age:")
+ city = input("where are you from?")
+ customers_file = open ("customers.json","r") 
+ customers = json.load(customers_file)
+ customers_file.close()
+ while True:
+    CusID = random.randint(2, 10000)
+    for customer in customers:
+       if CusID == customer['CusID']:
+          checkID = 1
+          break
+    if checkID != 1:
+       break
+ new_customer = Customer(name, CusID, age, city,  []) 
+ C = { "Name": new_customer.name,
+       "CusID": new_customer.CusID,
+       "Age": new_customer.age,
+       "City": new_customer.city,
+       "Loaned_books": new_customer.loaned_books, 
+       }
+ customers.append(C)
+ print("\nYou have signed in successfuly!\n")
+ customers_file = open ("customers.json","w")
+ json.dump(customers, customers_file) 
+ customers_file.close()
+
