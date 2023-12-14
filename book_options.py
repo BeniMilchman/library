@@ -54,7 +54,7 @@ def loan_book():
          print("You have 2 days to return this book to library.\n")
         add_new_loan(book_title, book['Type'], customer['CusID'] , book['BookID'], loan_date)   
   customers_file = open("customers.json" , "w")
-  json.dump(customers, customers_file) 
+  json.dump(customers, customers_file, indent = 1) 
   customers_file.close()
 
 
@@ -87,7 +87,7 @@ def return_book():
   loans = json.dump(loans, loans_file)
   loans_file.close()    
   customers_file = open("customers.json" , "w")
-  json.dump(customers, customers_file) 
+  json.dump(customers, customers_file, indent = 1) 
   customers_file.close()
 
 

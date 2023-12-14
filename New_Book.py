@@ -38,7 +38,7 @@ def add_book():
        }
    books.append(B)
    books_file = open ("Books.json","w")
-   json.dump(books, books_file) 
+   json.dump(books, books_file, indent = 1) 
    books_file.close()
 
         

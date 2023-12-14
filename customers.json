@@ -1,5 +1,51 @@
-[{"Name": "beni milchman", "CusID": 1, "Age": "26", "City": "akko", "Loaned_books": ["alice in wonderland", "harry potter and the philosopher's stone", "50 shades of gray"]},
- {"Name": "alice braverman", "CusID": 2, "Age": "27", "City": "atlit", "Loaned_books": ["50 shades of gray", "the hunger games", "harry potter and the deadly hollows"]}, 
- {"Name": "rachel", "CusID": 7141, "Age": "33", "City": "aa", "Loaned_books": ["alice in wonderland"]}, 
- {"Name": "kaki gadol", "CusID": 9722, "Age": "22", "City": "sherutim", "Loaned_books": ["50 shades of gray"]},
- {"Name": "muhamad def", "CusID": 2888, "Age": "33", "City": "gaza", "Loaned_books": []}]
+[
+ {
+  "Name": "beni milchman",
+  "CusID": 1,
+  "Age": "26",
+  "City": "akko",
+  "Loaned_books": [
+   "alice in wonderland",
+   "harry potter and the philosopher's stone",
+   "50 shades of gray"
+  ]
+ },
+ {
+  "Name": "alice braverman",
+  "CusID": 2,
+  "Age": "27",
+  "City": "atlit",
+  "Loaned_books": [
+   "50 shades of gray",
+   "the hunger games",
+   "harry potter and the deadly hollows"
+  ]
+ },
+ {
+  "Name": "rachel",
+  "CusID": 7141,
+  "Age": "33",
+  "City": "aa",
+  "Loaned_books": [
+   "alice in wonderland"
+  ]
+ },
+ {
+  "Name": "kaki gadol",
+  "CusID": 9722,
+  "Age": "22",
+  "City": "sherutim",
+  "Loaned_books": [
+   "50 shades of gray",
+   "the hunger games",
+   "harry potter and the deadly hollows"
+  ]
+ },
+ {
+  "Name": "muhamad def",
+  "CusID": 2888,
+  "Age": "33",
+  "City": "gaza",
+  "Loaned_books": []
+ }
+]

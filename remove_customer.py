@@ -18,6 +18,6 @@ def remove_customer_from_library():
         customers.remove(customer)
       print("Customer has been removed\n")  
    customers_file = open("customers.json" , "w")
-   json.dump(customers, customers_file)
+   json.dump(customers, customers_file, indent = 1)
    customers_file.close   
 

@@ -18,7 +18,7 @@ def add_new_loan(book_title, book_type, CusID, BookID, loandate):
       } 
  loans.append(L)
  loans_file = open ("loans.json","w")
- json.dump(loans, loans_file) 
+ json.dump(loans, loans_file, indent = 1) 
  loans_file.close()
 
 

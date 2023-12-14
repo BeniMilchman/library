@@ -19,5 +19,5 @@ def remove_book_from_library():
         books.remove(book)
         print("\nThe book has been removed from the library\n")
     books_file = open ("Books.json","w")
-    json.dump(books, books_file) 
+    json.dump(books, books_file, indent = 1) 
     books_file.close()     
