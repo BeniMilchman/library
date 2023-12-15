@@ -1,5 +1,7 @@
 import json
 from new_loans import add_new_loan
+from class_book import Book
+import random
 
   
 
@@ -92,12 +94,84 @@ def return_book():
 
 
 
-
-      
+def display_books():
+  books_file = open("books.json" , "r")
+  books = json.load(books_file)
+  books_file.close()
+  print("Books: \n")
+  for book in books:
+   print(book,"\n")
    
+      
+def find_book_by_name():
+  books_file = open("books.json" , "r")
+  books = json.load(books_file)
+  books_file.close()
+  book_title = input("Please enter book title:")
+  if not check_book(book_title,books):
+   print("this book is not in our library")
+  else:
+   for book in books:
+    if book_title == book['title']:
+     print(book) 
+  
+    
+    
+def add_book():
+
+ checkID = 0
+ title = input("Please enter book Title:")
+ author = input("Please enter book Author:")
+ year = input("Please enter Publication Year:")
+ type = input("Please select book type(1/2/3): ")
+ if type != '1' and type != '2' and type != '3':
+    print("Please insert a valid Type.\n")
+ else:    
+  books_file = open ("Books.json","r") 
+  books = json.load(books_file)
+  books_file.close()
+  if check_book(title , books):
+     print("This book is already exist in the library.\n")
+  else:   
+   while True:
+     BookID = random.randint(2, 10000)
+     for book in books:
+        if BookID == book['BookID']:
+           checkID = 1
+           break
+     if checkID != 1:
+        break
+   new_book = Book(title, BookID, author, year, type) 
+   B = { "Title": new_book.title,
+        "BookID": new_book.BookID,
+        "Author": new_book.author,
+        "Year": new_book.year,
+        "Type": new_book.type
+       }
+   books.append(B)
+   books_file = open ("Books.json","w")
+   json.dump(books, books_file, indent = 1) 
+   books_file.close()
+
+        
 
   
+def remove_book_from_library():
 
+  books_file = open("books.json" , "r")
+  books = json.load(books_file)
+  books_file.close()
+  book_title = input("Please enter book title:")
+  if not check_book(book_title,books):
+   print("this book is not in our library")
+  else:
+    for book in books:
+      if book_title == book["Title"]:
+        books.remove(book)
+        print("\nThe book has been removed from the library\n")
+    books_file = open ("Books.json","w")
+    json.dump(books, books_file, indent = 1) 
+    books_file.close()     
 
  
 

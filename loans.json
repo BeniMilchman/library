@@ -50,5 +50,13 @@
   "BookID": 543,
   "Loan date": "20/1/23",
   "Return date": ""
+ },
+ {
+  "Title": "the hunger games",
+  "Type": "2",
+  "CusID": 1,
+  "BookID": 5447,
+  "Loan date": "13/2/12",
+  "Return date": ""
  }
 ]
