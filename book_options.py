@@ -38,7 +38,6 @@ def loan_book():
    print("This book is not in our library")
   else:
    loan_date = input("Please enter loan date:")
-   #return_date = input("Please enter return date:")  
    for book in books:
     if book_title == book['Title']:
      for customer in customers:
@@ -84,9 +83,8 @@ def return_book():
     for loan in loans:
      if loan['Title'] == book_title and loan['CusID'] == customer['CusID']:
       loan['Return date'] = return_date
-  #print(customers) 
   loans_file = open("loans.json" , "w")
-  loans = json.dump(loans, loans_file)
+  loans = json.dump(loans, loans_file, indent = 1)
   loans_file.close()    
   customers_file = open("customers.json" , "w")
   json.dump(customers, customers_file, indent = 1) 
@@ -132,7 +130,8 @@ def add_book():
   books_file.close()
   if check_book(title , books):
      print("This book is already exist in the library.\n")
-  else:   
+  else:
+     
    while True:
      BookID = random.randint(2, 10000)
      for book in books:
@@ -149,9 +148,12 @@ def add_book():
         "Type": new_book.type
        }
    books.append(B)
+   print("\nThe book has been added to library\n") 
+   
    books_file = open ("Books.json","w")
    json.dump(books, books_file, indent = 1) 
    books_file.close()
+   
 
         
 

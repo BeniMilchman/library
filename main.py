@@ -1,13 +1,7 @@
 from book_options import loan_book, return_book, add_book, remove_book_from_library, find_book_by_name, display_books
-from New_customer import add_customer, remove_customer_from_library, display_customers, find_customer_by_name 
-#from New_Book import add_book
-#from remove_book import remove_book_from_library
-#from remove_customer import remove_customer_from_library
-#from books_list import display_books
-#from customers_list import display_customers
+from customer_options import add_customer, remove_customer_from_library, display_customers, find_customer_by_name 
 from loans_list import display_loans
-#from FindCustomer import find_customer_by_name
-#from FindBook import find_book_by_name
+
 
 
 
@@ -51,8 +45,6 @@ def main():
         display_customers()
     elif option == "7": 
         display_loans()
-    #elif option == "8": 
-       # remove_book_from_library()
     elif option == "9": 
         find_book_by_name()
     elif option == "10": 
@@ -61,18 +53,11 @@ def main():
         remove_book_from_library()
     elif option == "12":
         remove_customer_from_library()
+    else:
+        print("Please select valid option.")    
 
 
 main()
-#loan_book()
-#return_book()
-#add_customer()
-#display_books()
-#display_customers()
-#find_customer_by_name()
-#find_book_by_name()
-#remove_book_from_library()
-#remove_customer_from_library()
 
 
 

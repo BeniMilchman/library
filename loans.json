@@ -18,7 +18,7 @@
   "CusID": 1,
   "BookID": 5447,
   "Loan date": "15/08/1997",
-  "Return date": "20/08/2023"
+  "Return date": "22/22/22"
  },
  {
   "Title": "50 shades of gray",
@@ -26,37 +26,8 @@
   "BookID": 1896,
   "Loan date": "07/10/2023",
   "Return date": "15/10/2023"
- },
- {
-  "Title": "50 shades of gray",
-  "Type": "1",
-  "CusID": 9722,
-  "BookID": 1896,
-  "Loan date": "15/08/1997",
-  "Return date": ""
- },
- {
-  "Title": "the hunger games",
-  "Type": "2",
-  "CusID": 9722,
-  "BookID": 5447,
-  "Loan date": "23/3/23",
-  "Return date": ""
- },
- {
-  "Title": "harry potter and the deadly hollows",
-  "Type": "3",
-  "CusID": 9722,
-  "BookID": 543,
-  "Loan date": "20/1/23",
-  "Return date": ""
- },
- {
-  "Title": "the hunger games",
-  "Type": "2",
-  "CusID": 1,
-  "BookID": 5447,
-  "Loan date": "13/2/12",
-  "Return date": ""
  }
-]
+
+ ]
+ 
+
